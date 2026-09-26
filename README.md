@@ -250,14 +250,14 @@ upstream backend_cluster {
 # HTTP dan HTTPS ga yo'naltirish
 server {
     listen 80;
-    server_name vault-srv.trustbank.uz;
+    server_name vault.sarvartech.uz;
     return 301 https://$host$request_uri;
 }
 
 # Asosiy HTTPS Reverse Proxy
 server {
     listen 443 ssl;
-    server_name vault-srv.trustbank.uz;
+    server_name vault.sarvartech.uz;
 
     ssl_certificate     /etc/ssl/certs/vault.crt;
     ssl_certificate_key /etc/ssl/private/vault.key;
